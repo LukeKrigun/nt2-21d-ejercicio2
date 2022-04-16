@@ -23,7 +23,8 @@
         placeholder="Ingresar un criterio de busqueda por Dni...">
     <br>
 
-    <div v-if='personasFiltradas.length > 0' class="card-deck m-0">
+    <div v-if='(criterioDeBusquedaPorDni.length > 2 || criterioDeBusquedaPorDni.length == 0)  &&
+         (criterioDeBusquedaPorNombre.length > 2 || criterioDeBusquedaPorNombre.length == 0)'  class="card-deck m-0">
         <div class="row">
             <div class="col" v-for="persona in personasFiltradas">
                 <div class="card mb-3">
@@ -37,7 +38,7 @@
         </div>
     </div>
     <div v-else>
-        <p class="alert alert-warning">No hay resultados disponibles.</p>
+        <p class="alert alert-warning">Ingrese al menos 3 caracteres!!!</p>
     </div>
 
 </div>
@@ -63,6 +64,12 @@
                     apellido: "Krigun",
                     correo: "lucaskrigun@hotmail.com",
                     dni: "34519386"
+                },
+                {
+                    nombre: "Lucas2",
+                    apellido: "Krigun",
+                    correo: "lucaskrigun@hotmail.com",
+                    dni: "20419386"
                 },
             ]
 
